@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+    </h:head>
+
+    <h:body>
+        <h:form>
+             <p:outputLabel value="Esto si lo pueden ver todos"/>
+        </h:form>
+        <h:form rendered="#{loginC.personalM.TIP == 'A'}">
+            <p:outputLabel value="soy admin"/>
+            <p:outputLabel value="#{loginC.personalM.NOMCOM}"/>
+        </h:form>
+        <h:form rendered="#{loginC.personalM.TIP == 'U'}">
+            <p:outputLabel value="soy usuairo"/>
+            <p:outputLabel value="#{loginC.personalM.NOMCOM}"/>
+        </h:form>
+    </h:body>
+</html>
